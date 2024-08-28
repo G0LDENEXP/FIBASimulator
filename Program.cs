@@ -113,26 +113,7 @@ static List<TeamClass> QuarterFinals(List<TeamClass> groupWinners)
 
 static List<TeamClass> SemiFinals(List<TeamClass> quarterFinalWinners)
 {
-    var groupWinnersByGroup = quarterFinalWinners
-    .GroupBy(t => t.GetAssignedGroup())
-    .ToDictionary(g => g.Key, g => g.First());
-
-    // Divide into two semi-final matches
-    var semiFinal1 = quarterFinalWinners;
-    var semiFinal2 = quarterFinalWinners;
-
-    var semiFinalWinners = new List<TeamClass>();
-
-    // Determine winners for each semi-final
-    var semiFinal1Winner = semiFinal1.OrderByDescending(s => s.GetFIBARanking()).First();
-    var semiFinal2Winner = semiFinal2.OrderByDescending(s => s.GetFIBARanking()).First();
-
-    semiFinalWinners.Add(semiFinal1Winner);
-        semiFinalWinners.Add(semiFinal2Winner);
-
-    Console.WriteLine($"\nWinner of Semi-Final 1: {semiFinal1Winner.GetTeamName()}");
-    Console.WriteLine($"Winner of Semi-Final 2: {semiFinal2Winner.GetTeamName()}");
-     return semiFinalWinners;
+    //Ne znam
 }
 static TeamClass FinalRound(List<TeamClass> semiFinalists)
 {
