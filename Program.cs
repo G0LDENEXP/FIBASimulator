@@ -67,7 +67,6 @@ var groupWinners = GroupWinners(teams, groupNames, random);
 var semiFinalists = SemiFinals(groupWinners, random);
 
 var finalWinner = FinalRound(semiFinalists, random);
-//Console.WriteLine($"\nThe overall winner is: {finalWinner.GetTeamName()}");
 
 static void AssignAndDisplayGroups(List<TeamClass> teams, List<string> groupNames, Random random)
 {
